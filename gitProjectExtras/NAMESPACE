@@ -1,1 +1,1 @@
-exportPattern("^[[:alpha:]]+")
+export(assignGlobal,makeDir,makeGlobDir,returnGitRemoteURL,returnGitVersionNumber,setupProjectStructure,sourceAllLibs)
