@@ -1,5 +1,5 @@
-return_git_remoteURL <- function(git_loc=".git") {
-	git_loc=find_project_path(git_loc)
+returnGitRemoteURL <- function(gitLoc=".git") {
+	gitLoc=findProjectPath(gitLoc)
 	fileName=file.path(git_loc,'config')
 	URL=readChar(fileName, file.info(fileName)$size)
 	URL=strsplit(URL,'url = ')[[1]][2]
