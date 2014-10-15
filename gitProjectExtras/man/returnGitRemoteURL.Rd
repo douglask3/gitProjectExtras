@@ -1,62 +1,38 @@
 \name{returnGitRemoteURL}
 \alias{returnGitRemoteURL}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{
-%%  ~~function to do ... ~~
-}
+\title{Return Git Remote URL}
 \description{
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-returnGitRemoteURL(gitLoc = ".git")
+    returnGitRemoteURL(gitLoc = ".git")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{gitLoc}{
-%%     ~~Describe \code{gitLoc} here~~
+  \item{gitLoc}{name (and optional path location) of revision information store. Defualt is '.git'.}
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
-}
+\details{If path is not provided, \code{returnGitRemoteURL} will search current directory, and then search each directory out from current position in directory tree until gitLoc is found}
+\value{The url of the remote store of the current git project. If remote location has not been added, returns NA}
+%%\references{
+%% ~put references to the literature/web site here ~}
+\author{Douglas Kelley \email{douglas.kelley@mq.edu.au}}
+%%\note{
+%%  ~~further notes~~}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
+    \code{link{returnGitVersionNumber.Rd}}
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (gitLoc = ".git") 
-{
-    gitLoc = findProjectPath(gitLoc)
-    fileName = file.path(gitLoc, "config")
-    URL = readChar(fileName, file.info(fileName)$size)
-    URL = strsplit(URL, "url = ")[[1]][2]
-    return(strsplit(URL, "\n\t")[[1]][1])
-  }
+returnGitRemoteURL()
+makeDir("yayandwow")
+setwd("yayandwow")
+returnGitRemoteURL('../.git')
+returnGitRemoteURL()
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{ git }
+\keyword{ url }% __ONLY ONE__ keyword per line

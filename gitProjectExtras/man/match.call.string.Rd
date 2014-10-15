@@ -1,57 +1,38 @@
 \name{match.call.string}
 \alias{match.call.string}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{
-%%  ~~function to do ... ~~
-}
-\description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
-}
+\title{Match Call String}
+\description{Returns the name of the current function}
 \usage{
 match.call.string(call = sys.call(sys.parent(n = 1)), ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{call}{
-%%     ~~Describe \code{call} here~~
+  \item{call}{call position as used in \code{\link{match.string}}. Default position is the function from which \code{match.call.string} is called}
 }
-  \item{\dots}{
-%%     ~~Describe \code{\dots} here~~
+  \item{\dots}{Additional arguments passed to \code{\link{match.string}}}
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
+%%\details{}
+\value{function name from which match.call.string is called}
+%%\references{
 %% ~put references to the literature/web site here ~
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
-}
+%%}
+\author{Douglas Kelley \email{douglas.kelley@mq.edu.au}}
+%\note{}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+    \code{\link{match.string}}
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
+yayandwow <- function() {
+    match.call.string()
+}
 
-## The function is currently defined as
-function (call = sys.call(sys.parent(n = 1)), ...) 
-as.character(match.call(call = call, ...))[1]
+yayandwow()
+
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

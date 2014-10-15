@@ -1,23 +1,15 @@
 \name{returnGitVersionNumber}
 \alias{returnGitVersionNumber}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{
-%%  ~~function to do ... ~~
-}
-\description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
-}
+\title{Return Git Version Number}
+\description{Returns the current git revision code}
 \usage{
 returnGitVersionNumber(short = TRUE, gitLoc = ".git")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{short}{
-%%     ~~Describe \code{short} here~~
-}
-  \item{gitLoc}{
-%%     ~~Describe \code{gitLoc} here~~
-}
+  \item{short}{logical. If TRUE, returns the short (i.e 7 digit) revision code. If FALSE, returns full code}
+  \item{gitLoc}{name (and optional path location) of revision information store. Defualt is '.git'.}
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
