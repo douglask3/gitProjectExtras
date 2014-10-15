@@ -1,9 +1,10 @@
 Package: gitProjectExtras
 Type: Package
-Title: What the package does (short line)
+Title: Extra Functions for Integrating with git based projects
 Version: 1.0
 Date: 2014-10-15
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Douglas Kelley
+Maintainer: Douglas Kelley <douglas.kelley@mq.edu.au>
+Description: {Allows linking code and outputs with information about git revision numbers and storage 
+             locations. Also contains tools for setting up a proper project structure.
+License: GPL-2
