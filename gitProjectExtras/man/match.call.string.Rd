@@ -8,10 +8,9 @@ match.call.string(call = sys.call(sys.parent(n = 1)), ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{call}{call position as used in \code{\link{match.string}}. Default position is the function from which \code{match.call.string} is called}
-}
-  \item{\dots}{Additional arguments passed to \code{\link{match.string}}}
-}
+  \item{call}{call position as used in \code{\link{match.call}}. Default position is the function from which \code{match.call.string} is called}
+
+  \item{\dots}{Additional arguments passed to \code{\link{match.call}}}
 }
 %%\details{}
 \value{function name from which match.call.string is called}
@@ -24,12 +23,12 @@ match.call.string(call = sys.call(sys.parent(n = 1)), ...)
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-    \code{\link{match.string}}
+    \code{\link{match.call}}
 }
 \examples{
-yayandwow <- function() {
+match.call.string()
+yayandwow <<- function()
     match.call.string()
-}
 
 yayandwow()
 

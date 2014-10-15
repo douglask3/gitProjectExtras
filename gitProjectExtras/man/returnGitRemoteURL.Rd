@@ -2,16 +2,13 @@
 \alias{returnGitRemoteURL}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Return Git Remote URL}
-\description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
-}
+\description{Provides the URL of the remote git repo.}
 \usage{
     returnGitRemoteURL(gitLoc = ".git")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{gitLoc}{name (and optional path location) of revision information store. Defualt is '.git'.}
-}
 }
 \details{If path is not provided, \code{returnGitRemoteURL} will search current directory, and then search each directory out from current position in directory tree until gitLoc is found}
 \value{The url of the remote store of the current git project. If remote location has not been added, returns NA}
@@ -25,6 +22,7 @@
 
 \seealso{
     \code{link{returnGitVersionNumber.Rd}}
+}
 \examples{
 returnGitRemoteURL()
 makeDir("yayandwow")

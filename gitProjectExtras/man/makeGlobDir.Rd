@@ -21,7 +21,7 @@ makeGlobDir(obj, fname)
 %% ...}
 %%\references{
 %% ~put references to the literature/web site here ~}
-\author{Douglas Kelley \email(douglas.kelley@mq.ed.au)}
+\author{Douglas Kelley \email{douglas.kelley@mq.ed.au}}
 \note{does not make directories recursively}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
@@ -31,7 +31,7 @@ makeGlobDir(obj, fname)
 }
 \examples{
 list.dirs()
-makeGlobDir('wowandyay''yayandwow')
+makeGlobDir('wowandyay','yayandwow')
 list.dirs()
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
