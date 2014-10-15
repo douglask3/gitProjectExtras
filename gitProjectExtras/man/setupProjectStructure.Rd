@@ -1,61 +1,28 @@
 \name{setupProjectStructure}
 \alias{setupProjectStructure}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{
-%%  ~~function to do ... ~~
-}
-\description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
-}
+\title{Setup Project Structure}
+\description{Adds directories required for a project and places the path in global variables}
 \usage{
 setupProjectStructure(namess = c("out_dir", "data_dir", "temp_dir", "figs_dir", "docs_dir"), dirn = c("outputs", "data", "temp", "figs", "docs"))
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{namess}{
-%%     ~~Describe \code{namess} here~~
+  \item{namess}{Names of the global variables directory path will be stores. If NULL, variables are names as ''<directory name>_dir'}
+  \item{dirn}{directories to be created, with paths relative to current working directory. By default, creates folders for 'outputs', 'data', 'temp', 'figs', 'docs'}
 }
-  \item{dirn}{
-%%     ~~Describe \code{dirn} here~~
-}
-}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
-}
+%%\details{}
+\value{}
+%%\references{
+%% ~put references to the literature/web site here ~}
+\author{Douglas Kelley \email{douglas.kelley@mq.edu.au}}
+%%\note{%%  ~~further notes~~}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
-\examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (namess = c("out_dir", "data_dir", "temp_dir", "figs_dir", 
-    "docs_dir"), dirn = c("outputs", "data", "temp", "figs", 
-    "docs")) 
-mapply(makeGlobDir, namess, dirn)
-}
+%%\seealso{}
+%%\examples{}
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{ directories }
+\keyword{ structure }% __ONLY ONE__ keyword per line

@@ -33,5 +33,4 @@ list.dirs()
 makeDir('yayandwow')
 list.dirs()
 }
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{ Directories }

@@ -1,70 +1,37 @@
 \name{sourceAllLibs}
 \alias{sourceAllLibs}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{
-%%  ~~function to do ... ~~
-}
-\description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
-}
+\title{Source All Libraries}
+\description{Sources all R code in a given directory}
 \usage{
 sourceAllLibs(path = "libs/", trace = TRUE, ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{path}{
-%%     ~~Describe \code{path} here~~
+  \item{path}{Path to the directory containing code. Default is 'libs'}
+  \item{trace}{logical. Default of TRUE lists files being sourced as they are sourced. Useful for bug hunting.}
+  \item{\dots}{Arguements passed to \code{\link{source}}}
 }
-  \item{trace}{
-%%     ~~Describe \code{trace} here~~
-}
-  \item{\dots}{
-%%     ~~Describe \code{\dots} here~~
-}
-}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
+\details{If there is a sourcing error when trying to source of a file, then the error message is displayed and the 
+         file is skipped over. If trace=TRUE, the filename will be listed above the error}
+%%\value{
 %%  ~Describe the value returned
 %%  If it is a LIST, use
 %%  \item{comp1 }{Description of 'comp1'}
 %%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
-}
+%% ...}
+%%\references{
+%% ~put references to the literature/web site here ~}
+\author{R Core development team}
+\note{This is taken straight from the \code{\link{source}} help page example.}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+    \code{\link{source}}
 }
-\examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
-
-## The function is currently defined as
-function (path = "libs/", trace = TRUE, ...) 
-{
-    for (nm in list.files(path, pattern = "\\.[RrSsQq]$")) {
-        if (trace) 
-            cat(nm, ":")
-        try(source(file.path(path, nm), ...))
-        if (trace) 
-            cat("\n")
-    }
-  }
-}
+%%\examples{}
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{ source }
+\keyword{ directories }% __ONLY ONE__ keyword per line
