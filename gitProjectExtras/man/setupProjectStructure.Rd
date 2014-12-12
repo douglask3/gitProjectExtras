@@ -21,7 +21,34 @@ setupProjectStructure(namess = c("out_dir", "data_dir", "temp_dir", "figs_dir", 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 %%\seealso{}
-%%\examples{}
+\examples{
+	pritnFiles <- function(files)
+		lapply(files,function(i) print(i) )
+	
+	dir.create("yay")
+	setwd("yay")
+	
+	print( list.files() )
+	setupProjectStructure()
+	print( list.files() )
+	pritnFiles( c("out_dir", "data_dir", "temp_dir", "figs_dir", "docs_dir"))
+	
+	setwd(out_dir)
+	setwd("..")
+	
+	#########################################################################
+	
+	setupProjectStructure(namess = c("yay_dir", "wow_dir"), dirn = c("yay", "wow"))
+	
+	list.files()
+	pritnFiles( c("yay", "wow"))
+	
+	setwd(yay)
+	setwd("..")
+	
+
+	
+}
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
 \keyword{ directories }
