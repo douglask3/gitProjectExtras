@@ -4,7 +4,8 @@
 \docType{package}
 \title{Extra Functions for Integrating with git tracked projects}
 \description{Allows linking code and outputs with information about git revision numbers and remote 
-             location. Also contains tools for setting up a project structure when freshly cloned.}
+             location. Also contains tools for setting up a project structure when freshly cloned. Feel free to clone and contribute to the package:
+             \url{https://bitbucket.org/teambcd/gitprojectextras}}
 \details{
 \tabular{ll}{
 Package: \tab gitProjectExtras\cr
@@ -12,11 +13,13 @@ Type: \tab Package\cr
 Version: \tab 1.0\cr
 Date: \tab 2014-10-15\cr
 License: \tab GPL 2\cr
+Website: https://bitbucket.org/teambcd/gitprojectextras
 }
 %%~~ An overview of how to use the package, including the most important ~~
 %%~~ functions ~~
 }
-\author{Douglas Kelley \email{douglaskelley3@gmail.com}}
+\author{Douglas Kelley \email{douglaskelley3@gmail.com},
+Rhys Whitley   \email{rhys.whitley@gmail.com}}
 %%\references{
 %%~~ Literature or other references for background information ~~}
 %%~~ Optionally other standard keywords, one per line, from file KEYWORDS in ~~

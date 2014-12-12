@@ -3,7 +3,7 @@ Type: Package
 Title: Extra Functions for Integrating with git based projects
 Version: 1.0
 Date: 2014-10-15
-Author: Douglas Kelley
+Author: Douglas Kelley; Rhys Whitley
 Maintainer: Douglas Kelley <douglas.kelley@mq.edu.au>
 Description: {Allows linking code and outputs with information about git revision numbers and storage 
              locations. Also contains tools for setting up a proper project structure.

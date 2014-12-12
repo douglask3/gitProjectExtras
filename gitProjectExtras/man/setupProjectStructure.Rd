@@ -4,7 +4,7 @@
 \title{Setup Project Structure}
 \description{Adds directories required for a project and places the path in global variables}
 \usage{
-setupProjectStructure(namess = NULL, dirn = c("outputs", "data", "libs", "temp", "figs", "docs"))
+setupProjectStructure(namess = paste(dirn, "_dir", sep = ""), dirn = c("outputs", "data", "libs", "temp", "figs", "docs"))
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -31,19 +31,19 @@ setupProjectStructure(namess = NULL, dirn = c("outputs", "data", "libs", "temp",
 	print( list.files() )
 	setupProjectStructure()
 	print( list.files() )
-	printFiles( c("out_dir", "data_dir", "temp_dir", "figs_dir", "docs_dir"))
+	printFiles( c(outputs_dir, data_dir, temp_dir, figs_dir, docs_dir))
 	
-	setwd(out_dir)
+	setwd(outputs_dir)
 	setwd("..")
 	
 	#########################################################################
 	
-	setupProjectStructure(namess = c("yay_dir", "wow_dir"), dirn = c("yay", "wow"))
+	setupProjectStructure(namess = c("yayDir", "wowDir"), dirn = c("yay", "wow"))
 	
 	list.files()
 	printFiles( c("yay", "wow"))
 	
-	setwd(yay_dir)
+	setwd(yayDir)
 	setwd("..")
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
