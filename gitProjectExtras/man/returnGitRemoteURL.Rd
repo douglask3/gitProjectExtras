@@ -11,10 +11,10 @@
   \item{gitLoc}{name (and optional path location) of revision information store. Defualt is '.git'.}
 }
 \details{If path is not provided, \code{returnGitRemoteURL} will search current directory, and then search each directory out from current position in directory tree until gitLoc is found}
-\value{The url of the remote store of the current git project. If remote location has not been added, returns NA}
+\value{The url of the remote location of the git repo. If remote location has not been added, returns NA}
 %%\references{
 %% ~put references to the literature/web site here ~}
-\author{Douglas Kelley \email{douglas.kelley@mq.edu.au}}
+\author{Douglas Kelley \email{douglaskelley3@gmail.com}}
 %%\note{
 %%  ~~further notes~~}
 
