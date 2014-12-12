@@ -12,7 +12,7 @@ setupProjectStructure(namess = c("out_dir", "data_dir", "temp_dir", "figs_dir", 
   \item{dirn}{directories to be created, with paths relative to current working directory. By default, creates folders for 'outputs', 'data', 'temp', 'figs', 'docs'}
 }
 %%\details{}
-\value{}
+\value{Sets "namess" as globally callable variables}
 %%\references{
 %% ~put references to the literature/web site here ~}
 \author{Douglas Kelley \email{douglas.kelley@mq.edu.au}}
