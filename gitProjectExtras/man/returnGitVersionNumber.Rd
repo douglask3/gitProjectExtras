@@ -15,7 +15,7 @@ returnGitVersionNumber(short = TRUE, gitLoc = ".git")
 %%  ~~ If necessary, more details than the description above ~~}
 \value{The revision code for the last git commit.}
 %%\references{%% ~put references to the literature/web site here ~}
-\author{Douglas Kelley \email{douglas.kelley@mq.edu.au}}
+\author{Douglas Kelley \email{douglaskelley3@gmail.com}}
 \note{Does not indicate if modification has been made since last commit.}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
@@ -27,8 +27,12 @@ returnGitVersionNumber(short = TRUE, gitLoc = ".git")
 returnGitVersionNumber()
 makeDir("yayandwow")
 setwd("yayandwow")
+
+# The next two calls return the same value
 returnGitVersionNumber(gitLoc = '../.git')
 returnGitVersionNumber()
+
+# Return Long revision number
 returnGitVersionNumber(FALSE)
 
 }
