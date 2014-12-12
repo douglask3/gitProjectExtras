@@ -27,7 +27,7 @@ returnGitVersionNumber(short = TRUE, gitLoc = ".git")
 returnGitVersionNumber()
 makeDir("yayandwow")
 setwd("yayandwow")
-returnGitVersionNumber(gitLoc='../.git')
+returnGitVersionNumber(gitLoc = '../.git')
 returnGitVersionNumber()
 returnGitVersionNumber(FALSE)
 

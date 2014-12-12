@@ -31,7 +31,7 @@ makeGlobDir(obj, fname)
 }
 \examples{
 list.dirs()
-makeGlobDir('wowandyay','yayandwow')
+makeGlobDir('wowandyay', 'yayandwow')
 list.dirs()
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
