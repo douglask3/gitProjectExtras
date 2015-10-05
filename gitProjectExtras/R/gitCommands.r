@@ -1,5 +1,6 @@
 git <- function(command) {
-    command = paste('git', command, collapse = ' ')
+    command = paste(c('git', command), collapse = ' ')
+
     system(command)
 }
 
@@ -11,6 +12,7 @@ git.status <- function(...) git(c('status', ...))
 git.commit <- function(message, messageType = '-m', commitOptions = '') {
     message = paste('"', message, '"', sep = "")
     command = c('commit', messageType, commitOptions, message)
+    
     git(command)
 }
 
