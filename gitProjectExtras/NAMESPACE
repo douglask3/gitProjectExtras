@@ -1,1 +1,1 @@
-export(makeDir,makeGlobDir,returnGitRemoteURL,returnGitVersionNumber,setupProjectStructure,sourceAllLibs,match.call.string)
+export(makeDir,makeGlobDir,gitRemoteURL,gitVersionNumber,setupProjectStructure,sourceAllLibs,match.call.string)
