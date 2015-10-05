@@ -22,7 +22,7 @@ makeGlobDir(obj, fname, ...)
 %% ...}
 %%\references{
 %% ~put references to the literature/web site here ~}
-\author{Douglas Kelley \email{douglas.kelley@mq.ed.au}}
+\author{Douglas Kelley \email{douglas.i.kelley@gmail.com}}
 \note{does not make directories recursively}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~

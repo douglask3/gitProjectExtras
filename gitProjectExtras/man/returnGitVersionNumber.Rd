@@ -15,7 +15,7 @@ returnGitVersionNumber(short = TRUE, gitLoc = ".git")
 %%  ~~ If necessary, more details than the description above ~~}
 \value{The revision code for the last git commit.}
 %%\references{%% ~put references to the literature/web site here ~}
-\author{Douglas Kelley \email{douglaskelley3@gmail.com}}
+\author{Douglas Kelley \email{douglas.i.kelley@gmail.com}}
 \note{Does not indicate if modification has been made since last commit.}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~

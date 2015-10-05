@@ -3,7 +3,7 @@
 \alias{gitProjectExtras}
 \docType{package}
 \title{Extra Functions for Integrating with git tracked projects}
-\description{Allows linking code and outputs with information about git revision numbers and remote 
+\description{Allows linking code and outputs with information about git revision numbers and remote
              location. Also contains tools for setting up a project structure when freshly cloned. Feel free to clone and contribute to the package:
              \url{https://bitbucket.org/teambcd/gitprojectextras}}
 \details{
@@ -18,7 +18,7 @@ Website: https://bitbucket.org/teambcd/gitprojectextras
 %%~~ An overview of how to use the package, including the most important ~~
 %%~~ functions ~~
 }
-\author{Douglas Kelley \email{douglaskelley3@gmail.com},
+\author{Douglas Kelley \email{douglas.i.kelley@gmail.com},
 Rhys Whitley   \email{rhys.whitley@gmail.com}}
 %%\references{
 %%~~ Literature or other references for background information ~~}
@@ -42,7 +42,7 @@ Rhys Whitley   \email{rhys.whitley@gmail.com}}
 	makeDir("tryOut")
 	setwd("tryOut")
 	setupProjectStructure()
-	
+
 	fileConn <- file("libs/yay.r")
 	writeLines(c(
 		"yay <- function(toFile=FALSE) {			",
@@ -61,14 +61,14 @@ Rhys Whitley   \email{rhys.whitley@gmail.com}}
 		"	if (toFile) dev.off()					",
 	   "}												"),
 	 fileConn)
-	 
+
 	close(fileConn)
-	
+
 	sourceAllLibs()
-	
+
 	yay()
-	
+
 	yay(TRUE)
-	
+
 	list.files("figs/")
 }

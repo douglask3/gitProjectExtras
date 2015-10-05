@@ -15,7 +15,7 @@ setupProjectStructure(namess = paste(dirn, "_dir", sep = ""), dirn = c("outputs"
 \value{Sets "namess" as globally callable variables}
 %%\references{
 %% ~put references to the literature/web site here ~}
-\author{Douglas Kelley \email{douglaskelley3@gmail.com}}
+\author{Douglas Kelley \email{douglas.i.kelley@gmail.com}}
 %%\note{%%  ~~further notes~~}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
@@ -24,25 +24,25 @@ setupProjectStructure(namess = paste(dirn, "_dir", sep = ""), dirn = c("outputs"
 \examples{
 	printFiles <- function(files)
 		lapply(files,function(i) print(i) )
-	
+
 	dir.create("yay")
 	setwd("yay")
-	
+
 	print( list.files() )
 	setupProjectStructure()
 	print( list.files() )
 	printFiles( c(outputs_dir, data_dir, temp_dir, figs_dir, docs_dir))
-	
+
 	setwd(outputs_dir)
 	setwd("..")
-	
+
 	#########################################################################
-	
+
 	setupProjectStructure(namess = c("yayDir", "wowDir"), dirn = c("yay", "wow"))
-	
+
 	list.files()
 	printFiles( c("yay", "wow"))
-	
+
 	setwd(yayDir)
 	setwd("..")
 }

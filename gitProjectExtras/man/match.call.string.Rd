@@ -17,7 +17,7 @@ match.call.string(n = 1, call = sys.call(sys.parent(n = n)), ...)
 %%\references{
 %% ~put references to the literature/web site here ~
 %%}
-\author{Douglas Kelley \email{douglas.kelley@mq.edu.au}}
+\author{Douglas Kelley \email{douglas.i.kelley@gmail.com}}
 %\note{}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~

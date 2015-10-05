@@ -20,7 +20,7 @@ makeDir(fname, ...)
 %% ...}
 %%\references{
 %% ~put references to the literature/web site here ~}
-\author{Douglas Kelley \email{douglas.kelley@mq.edu.au}}
+\author{Douglas Kelley \email{douglas.i.kelley@gmail.com}}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 

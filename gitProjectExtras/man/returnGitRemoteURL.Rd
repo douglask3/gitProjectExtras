@@ -14,7 +14,7 @@
 \value{The url of the remote location of the git repo. If remote location has not been added, returns NA}
 %%\references{
 %% ~put references to the literature/web site here ~}
-\author{Douglas Kelley \email{douglaskelley3@gmail.com}}
+\author{Douglas Kelley \email{douglas.i.kelley@gmail.com}}
 %%\note{
 %%  ~~further notes~~}
 
