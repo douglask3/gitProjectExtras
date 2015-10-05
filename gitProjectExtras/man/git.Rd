@@ -50,8 +50,35 @@
     \code{\link{gitVersionNumber}}
 }
 \examples{
-list.dirs()
-makeDir('yayandwow')
-list.dirs()
+    ## setup project
+    makeDir('yayandwow')
+    setwd('yayandwow')
+    git('init')
+    git.status()
+
+    ## simple outpur file function
+    write.text <- function(txt, filename, ...) cat(txt, file = filename, sep = "\n")
+
+    ## write some example files
+    write.text('yay', 'yay.txt', sep ='')
+    write.text('wow', 'wow.txt', sep ='')
+
+    ## commit these files
+    git.add() ## adds all files
+    git.commit('yay and wow')
+
+    ## add new file and change old one
+    write.text('yayandwow', 'newFile.txt', sep ='')
+    write.text('wownotyay', 'wow.txt', sep ='')
+
+    ## show status and commit new file
+    git.status()
+    git.add('newFile.txt')
+    git.commit('yayandwow')
+
+    ## show status and previous commits
+    git.status()
+    gitVersionNumber()
+    git('log')
 }
 \keyword{ Directories }
