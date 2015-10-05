@@ -1,24 +1,26 @@
-git <- function(command) {
-    command = paste(c('git', command), collapse = ' ')
+git <- function(commands) {
+    commands = paste(c('git', commands), collapse = ' ')
 
-    system(command)
+    system(commands)
 }
 
-git.push <- function(...) git(c('push', ...))
-git.pull <- function(...) git(c('pull', ...))
+git.push   <- function(...) git(c('push', ...))
+git.pull   <- function(...) git(c('pull', ...))
+
 
 git.status <- function(...) git(c('status', ...))
 
-git.commit <- function(message, messageType = '-m', commitOptions = '') {
-    message = paste('"', message, '"', sep = "")
-    command = c('commit', messageType, commitOptions, message)
-    
-    git(command)
+
+git.commit <- function(message, messageType = '-m', ...) {
+    message  = paste('"', message, '"', sep = "")
+    commands = c('commit', messageType, ..., message)
+
+    git(commands)
 }
 
-git.add <- function(files ='.', addOptions = '') {
-    command = paste('add', addOptions, files)
-    git(command)
+git.add    <- function(files ='.', ...) {
+    commands  = paste('add', ..., files)
+    git(commands)
 }
 
 git.addCommit <- function(files = '.', message, messageType = '-m',
