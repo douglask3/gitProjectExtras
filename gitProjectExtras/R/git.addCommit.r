@@ -3,10 +3,10 @@ git <- function(command) {
     system(command)
 }
 
-git.status <- function(statusOptions= '') {
-    command = c('status', statusOptions)
-    git(command)
-}
+git.push <- function(...) git(c('push', ...))
+git.pull <- function(...) git(c('pull', ...))
+
+git.status <- function(...) git(c('status', ...))
 
 git.commit <- function(message, messageType = '-m', commitOptions = '') {
     message = paste('"', message, '"', sep = "")
