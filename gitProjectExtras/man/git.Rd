@@ -27,6 +27,7 @@
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{commands}{string (or string vector) describing commands being sent to git}
+  \item{...}{additional commands passed to \code{git}}
   \item{files}{vector or files to be added}
   \item{message}{commit message}
   \item{messageType}{commit message type, default '-m' for command line message
