@@ -1,10 +1,10 @@
-\name{returnGitVersionNumber}
-\alias{returnGitVersionNumber}
+\name{gitVersionNumber}
+\alias{gitVersionNumber}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Return Git Version Number}
 \description{Returns the current git revision code}
 \usage{
-returnGitVersionNumber(short = TRUE, gitLoc = ".git")
+    gitVersionNumber(short = TRUE, gitLoc = ".git")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -21,19 +21,19 @@ returnGitVersionNumber(short = TRUE, gitLoc = ".git")
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-    \code{\link{returnGitRemoteURL}}
+    \code{\link{gitRemoteURL}}
 }
 \examples{
-returnGitVersionNumber()
+gitVersionNumber()
 makeDir("yayandwow")
 setwd("yayandwow")
 
 # The next two calls return the same value
-returnGitVersionNumber(gitLoc = '../.git')
-returnGitVersionNumber()
+gitVersionNumber(gitLoc = '../.git')
+gitVersionNumber()
 
 # Return Long revision number
-returnGitVersionNumber(FALSE)
+gitVersionNumber(FALSE)
 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

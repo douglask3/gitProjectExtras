@@ -1,16 +1,16 @@
-\name{returnGitRemoteURL}
-\alias{returnGitRemoteURL}
+\name{gitRemoteURL}
+\alias{gitRemoteURL}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Return Git Remote URL}
 \description{Provides the URL of the remote git repo.}
 \usage{
-    returnGitRemoteURL(gitLoc = ".git")
+    gitRemoteURL(gitLoc = ".git")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{gitLoc}{name (and optional path location) of revision information store. Defualt is '.git'.}
 }
-\details{If path is not provided, \code{returnGitRemoteURL} will search current directory, and then search each directory out from current position in directory tree until gitLoc is found}
+\details{If path is not provided, \code{gitRemoteURL} will search current directory, and then search each directory out from current position in directory tree until gitLoc is found}
 \value{The url of the remote location of the git repo. If remote location has not been added, returns NA}
 %%\references{
 %% ~put references to the literature/web site here ~}
@@ -21,14 +21,14 @@
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-    \code{link{returnGitVersionNumber.Rd}}
+    \code{link{gitVersionNumber.Rd}}
 }
 \examples{
-returnGitRemoteURL()
+gitRemoteURL()
 makeDir("yayandwow")
 setwd("yayandwow")
-returnGitRemoteURL('../.git')
-returnGitRemoteURL()
+gitRemoteURL('../.git')
+gitRemoteURL()
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

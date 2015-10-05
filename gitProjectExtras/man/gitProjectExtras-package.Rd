@@ -47,8 +47,8 @@ Rhys Whitley   \email{rhys.whitley@gmail.com}}
 	writeLines(c(
 		"yay <- function(toFile=FALSE) {			",
 		"	funName = match.call.string()			",
-		"	gitRev  = returnGitVersionNumber()		",
-		"	getURL  = returnGitRemoteURL()			",
+		"	gitRev  = gitVersionNumber()		",
+		"	getURL  = gitRemoteURL()			",
 		"												",
 		"	if (toFile)								",
 		"	pdf(paste('figs/egFig_',funName,			",
