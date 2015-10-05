@@ -9,7 +9,7 @@ sourceAllLibs(path = "libs/", trace = TRUE, ...)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{path}{Path to the directory containing code. Default is 'libs'}
-  \item{trace}{logical. Default of TRUE lists files being sourced as they are sourced. Useful for bug hunting.}
+  \item{trace}{logical. Default of TRUE lists files as they are sourced. Useful for bug hunting.}
   \item{\dots}{Arguements passed to \code{\link{source}}}
 }
 \details{If there is a sourcing error when trying to source of a file, then the error message is displayed and the 

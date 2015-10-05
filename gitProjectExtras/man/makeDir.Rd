@@ -2,16 +2,16 @@
 \alias{makeDir}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Make Directory}
-\description{If directory does not exist, then create it}
+\description{If directory does not exist, then create it. Essentially works as \code{\link{dir.create}} but will not cause an error if the directory already exists.}
 \usage{
-makeDir(fname)
+makeDir(fname, ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{fname}{path and name of directory to be made}
+  \item{fname}{name (inc. path) of directory to be made}
+  \item{\dots}{Arguements passed to \code{\link{dir.create}}}
 }
-%%\details{
-%%  ~~ If necessary, more details than the description above ~~}
+\details{Note, with R3.0+, this function is probably obsolute. Just use dir.create(path, showWarnings=FALSE) instead.}
 %%\value{
 %%  ~Describe the value returned
 %%  If it is a LIST, use
@@ -21,12 +21,12 @@ makeDir(fname)
 %%\references{
 %% ~put references to the literature/web site here ~}
 \author{Douglas Kelley \email{douglas.kelley@mq.edu.au}}
-\note{does not make directories recursively}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
     \code{\link{makeGlobDir}}
+    \code{\link{dir.create}}
 }
 \examples{
 list.dirs()

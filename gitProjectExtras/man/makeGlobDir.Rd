@@ -4,12 +4,13 @@
 \title{Make Global Directory}
 \description{If it does not already exist, makes directory. Whether directory exists or not, assigns directory path to a global variable}
 \usage{
-makeGlobDir(obj, fname)
+makeGlobDir(obj, fname, ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{obj}{variable name which will store directory path and become global}
+  \item{obj}{name of global variable in which directory path will be stored}
   \item{fname}{directory name/path used by \code{\link{makeDir}}}
+  \item{\dots}{Arguements passed to \code{\link{dir.create}}}
 }
 %%\details{
 %%  ~~ If necessary, more details than the description above ~~}
@@ -27,11 +28,12 @@ makeGlobDir(obj, fname)
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-     \code{\link{makeDir}}
+	\code{\link{makeDir}}
+	\code{\link{dir.create}}
 }
 \examples{
 list.dirs()
-makeGlobDir('wowandyay','yayandwow')
+makeGlobDir('wowandyay', 'yayandwow')
 list.dirs()
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
