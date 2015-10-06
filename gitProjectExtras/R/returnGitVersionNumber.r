@@ -9,5 +9,5 @@ gitVersionNumber <- function(short = TRUE, gitLoc = ".git") {
 	rev = as.matrix(read.table(headAt))
 	if (short) rev = substr(rev, 1, 7)
 
-	return(rev)
+	return(rev[1])
 }
