@@ -6,6 +6,8 @@
 \alias{git.commit}
 \alias{git.add}
 \alias{git.addCommit}
+\alias{git.log}
+\alias{git.checkout}
 
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{git Commands}
@@ -23,6 +25,9 @@
 
     git.addCommit(files = '.', message, messageType = '-m',
                   addOptions = '', commitOptions = '')
+
+    git.log(...)
+    git.checkout(...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -36,8 +41,8 @@
   \item{commitOptions}{git commands used by git.commit}
 }
 \details{
-    \code{git} is essentially the same as system('git <<commands>>')
-    \code{git.xxx} works much the same as git xxx in command line)
+    \code{git} is essentially the same as \code{system('git <<commands>>')}
+    \code{git.xxx} works much the same as \code{git xxx} in command line)
 }
 
 \author{Douglas Kelley \email{douglas.i.kelley@gmail.com}}
