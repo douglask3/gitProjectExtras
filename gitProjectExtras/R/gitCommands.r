@@ -19,7 +19,7 @@ git.commit <- function(message, messageType = '-m', ...) {
 }
 
 git.add    <- function(files ='.', ...) {
-    commands  = paste('add', ..., files)
+    commands  = c('add', ..., files)
     git(commands)
 }
 
