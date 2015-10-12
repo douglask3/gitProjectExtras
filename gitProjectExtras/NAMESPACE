@@ -1,5 +1,6 @@
 export(makeDir, makeGlobDir, setupProjectStructure,
        sourceAllLibs, match.call.string,
        gitRemoteURL, gitVersionNumber,
-       git, git.push, git.pull, git.status, git.commit, git.add, git.addCommit,
+       git, git.push, git.pull, git.status,
+       git.commit, git.add, git.addCommit, git.log,
        gitWatermark, dev.off.gitWatermark)
