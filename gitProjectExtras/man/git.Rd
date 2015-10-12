@@ -84,6 +84,6 @@
     ## show status and previous commits
     git.status()
     gitVersionNumber()
-    git('log')
+    git.log()
 }
 \keyword{ Directories }
