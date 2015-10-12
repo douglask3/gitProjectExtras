@@ -16,7 +16,7 @@ gitWatermark <- function(VersionNumber = TRUE, URL = TRUE,
     txt = c(txt, comment)
     txt = paste(txt, collapse = '\n')
 
-    par(fig = c(0,1,0,1))
+    par(fig = c(0, 1, 0, 1), mar = rep(0, 4))
     usr = par('usr')
 
     x = usr[1] + diff(usr[1:2]) * x
