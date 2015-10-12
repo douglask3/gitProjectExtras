@@ -1,7 +1,7 @@
 Package: gitProjectExtras
 Type: Package
 Title: Extra Functions for Integrating with git based projects
-Version: 2.20
+Version: 2.21
 Date: 2015-10-09
 Author: Douglas Kelley; Rhys Whitley
 Maintainer: Douglas Kelley <douglas.kelley@mq.edu.au>

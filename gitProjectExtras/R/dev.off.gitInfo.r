@@ -24,7 +24,7 @@ gitWatermark <- function(VersionNumber = TRUE, URL = TRUE,
 
     col = make.transparent(col, transparency)
 
-    text(x, y, txt, srt = srt, col = col,...)
+    text(x, y, txt, srt = srt, col = col, xpd = TRUE,...)
 
 }
 
