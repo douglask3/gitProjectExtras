@@ -66,7 +66,7 @@ print.gitRevisions   <- function(x, ...) {
     print.gitRevision(tail(x,1))
 }
 
-summary.gitRevisions <- function(x, ...) printCatN(names(x), ...)
+summary.gitRevisions <- function(object, ...) printCatN(names(object), ...)
 
 
 printCatN <- function(x, ...)
