@@ -4,7 +4,7 @@
 \title{Write raster data to a file with git information}
 \description{An extension of \code{\link{writeRaster}} in package
              \code{\link{raster}} which adds projects git information to
-             outputted raster file}
+             outputted netcdf raster file}
 \usage{
     writeRaster.gitInfo(x, filename,
     	                VersionNumber = TRUE, URL = TRUE,
@@ -14,13 +14,14 @@
 \arguments{
   \item{x}{\link{raster}, \link{stack} or \link{brick} object}
   \item{filename}{Output filename}
-  \item{VersionNumber}{logical. Default of \code{TRUE} adds git version number attribute}
+  \item{VersionNumber}{logical. Default of \code{TRUE} adds git version number
+        attribute}
   \item{URL}{logical. Default of \code{TRUE} adds git remote URL to attribute}
   \item{comment}{additional text to be added to watermark}
   \item{\dots}{Additional arguments passed to  \code{\link{writeRaster}}}
 }
-\details{Works exactly the same way as \code{\link{writeRaster}} but adds
-         git information is added as comment attributes. Note, unlike #
+\details{Works exactly the same way as \code{\link{writeRaster}} on netcdf files
+         but adds git information is added as comment attributes. Note, unlike
          \code{\link{gitWatermark}}, there is no additional arguement for adding
          a time and date stamp, and this is already performed by
          \code{\link{writeRaster}}}
@@ -61,7 +62,6 @@
     bf <- writeRaster.gitInfo(b, filename="multi.nc", URL = FALSE,
                               comment = c(yay = 'wow'), overwrite=TRUE)
     printAttributes('multi.nc')
-
 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
