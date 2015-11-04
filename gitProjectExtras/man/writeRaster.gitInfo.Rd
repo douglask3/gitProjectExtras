@@ -7,8 +7,7 @@
              outputted netcdf raster file}
 \usage{
     writeRaster.gitInfo(x, filename,
-    	                VersionNumber = TRUE, URL = TRUE,
-                        timeAndDate = TRUE, comment = NULL, ...)
+    	                VersionNumber = TRUE, URL = TRUE, comment = NULL, ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -40,6 +39,8 @@
     \code{\link{dev.off.gitWatermark}}
 }
 \examples{
+    require(raster)
+    require(ncdf4)
     r <- raster(system.file("external/test.grd", package = "raster"))
 
     # take a small part
