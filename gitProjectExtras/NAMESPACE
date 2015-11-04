@@ -4,4 +4,6 @@ export(makeDir, makeGlobDir, setupProjectStructure,
        git, git.push, git.pull, git.status,
        git.diff, git.add, git.commit, git.addCommit, git.checkout,
        git.log, print.gitRevision, print.gitRevisions, summary.gitRevisions,
-       gitWatermark, dev.off.gitWatermark)
+       gitWatermark, dev.off.gitWatermark, writeRaster.gitInfo)
+
+import(ncdf4, raster)
