@@ -1,8 +1,8 @@
 Package: gitProjectExtras
 Type: Package
 Title: Extra Functions for Integrating with git based projects
-Version: 2.23
-Date: 2015-10-09
+Version: 2.30
+Date: 2015-11-04
 Author: Douglas Kelley; Rhys Whitley
 Maintainer: Douglas Kelley <douglas.kelley@mq.edu.au>
 Suggests: raster, R (>= 3.0.0), ncdf4
