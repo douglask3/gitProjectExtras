@@ -22,7 +22,7 @@ gitWatermark(VersionNumber = TRUE, URL = TRUE,
   \item{srt}{angle of watermark. see \code{\link{text}}}
   \item{\dots}{Additional arguments passed to  \code{\link{text}}}
 }
-\details{dev.off.gitWatermark adds watermark when figure is closed}
+\details{\code{dev.off.gitWatermark} adds watermark when figure is closed}
 %%\references{
 %% ~put references to the literature/web site here ~
 %%}
@@ -58,5 +58,6 @@ gitWatermark(VersionNumber = TRUE, URL = TRUE,
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ call }
-\keyword{ name }
+\keyword{ graphics }
+\keyword{ plot }
+\keyword{ git }
