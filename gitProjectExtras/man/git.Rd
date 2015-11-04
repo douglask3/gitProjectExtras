@@ -7,14 +7,17 @@
 \alias{git.add}
 \alias{git.commit}
 \alias{git.addCommit}
-\alias{git.log}
 \alias{git.checkout}
+\alias{git.log}
+\alias{print.gitRevision}
+\alias{print.gitRevisions}
+\alias{summary.gitRevisions}
 
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{git Commands}
 \description{runs git commands from R}
 \usage{
-    git(commands)
+    git(commands, ...)
 
     git.push(...)
     git.pull(...)
@@ -28,13 +31,14 @@
     git.addCommit(files = '.', message, messageType = '-m',
                   addOptions = '', commitOptions = '')
 
-    git.log(...)
     git.checkout(...)
+    git.log(...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{commands}{string (or string vector) describing commands being sent to git}
-  \item{...}{additional commands passed to \code{git}}
+  \item{...}{additional commands passed to \code{git} and ultimatly to
+             \code{\link{system}}}
   \item{files}{vector or files to be added}
   \item{message}{commit message}
   \item{messageType}{commit message type, default '-m' for command line message
@@ -45,14 +49,16 @@
 \details{
     \code{git} is essentially the same as \code{system('git <<commands>>')}
     \code{git.xxx} works much the same as \code{git xxx} in command line)
+    Arguments are also passed to \code{\link{system}}. It is therefore possible
+    to intern the printout (i.e, capture the output of the command as an R
+    character vector rather than print to console). For \code{git.log()},
+    output is to console and interned to R vector. See example below
 }
 
 \author{Douglas Kelley \email{douglas.i.kelley@gmail.com}}
-\note{These function invoke commands and may not work on all systems}
+\note{These functions invoke commands and may not work on all OSs}
 
 \seealso{
-
-
     \code{\link{gitRemoteURL}}
     \code{\link{gitVersionNumber}}
 }
@@ -86,6 +92,10 @@
     ## show status and previous commits
     git.status()
     gitVersionNumber()
-    git.log()
+    log = git.log()
+
+    print(log)
+    print(log[[1]])
+    summary(log)
 }
 \keyword{ Directories }
