@@ -20,8 +20,14 @@ git.commit   <- function(message, messageType = '-m', ...) {
     git(commands)
 }
 
-git.add      <- function(files ='.', ...) {
-    commands  = c('add', ..., files)
+git.add      <- function(files ='.', ...)
+    gitOptionCommandFile('add', files, ...)
+
+git.diff      <- function(files ='.', ...)
+    gitOptionCommandFile('diff', files, ...)
+
+gitOptionCommandFile <- function(command, files, ...) {
+    commands  = c(command, ..., files)
     git(commands)
 }
 

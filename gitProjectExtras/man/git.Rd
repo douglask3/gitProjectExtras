@@ -3,8 +3,9 @@
 \alias{git.push}
 \alias{git.pull}
 \alias{git.status}
-\alias{git.commit}
+\alias{git.diff}
 \alias{git.add}
+\alias{git.commit}
 \alias{git.addCommit}
 \alias{git.log}
 \alias{git.checkout}
@@ -20,6 +21,7 @@
 
     git.status(...)
 
+    git.diff(files = '.', ...)
     git.add(files = '.', ...)
     git.commit(message, messageType = '-m', ...)
 
