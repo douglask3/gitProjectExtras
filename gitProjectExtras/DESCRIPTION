@@ -5,7 +5,6 @@ Version: 2.31
 Date: 2015-11-09
 Author: Douglas Kelley; Rhys Whitley
 Maintainer: Douglas Kelley <douglas.kelley@mq.edu.au>
-Suggests: raster, ncdf4
 Imports: raster, ncdf4
 Description: {Allows linking code and outputs with information about git
               revision numbers and storage locations.
