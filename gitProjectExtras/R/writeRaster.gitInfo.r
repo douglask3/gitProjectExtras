@@ -13,14 +13,12 @@ writeRaster.gitInfo <- function(x, filename,
 		for (i in 1:nlayers(x)) filename = c(filename, filename(x[[i]]))
 		filename = unique(filename)
 
-		sapply(filename, addGitInfo2RasterFile,
-			   VersionNumber, URL, timeAndDate, comment)
+		sapply(filename, addGitInfo2RasterFile, VersionNumber, URL, comment)
 	}
 	return(x)
 }
 
-addGitInfo2RasterFile <- function(filename, VersionNumber, URL,
-								  timeAndDate, comment) {
+addGitInfo2RasterFile <- function(filename, VersionNumber, URL, comment) {
 
 	attPutStandard <- function(test, name, val)
 		if (test) ncatt_put(nc, 0, name, val)
