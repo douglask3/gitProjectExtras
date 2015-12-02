@@ -15,7 +15,7 @@
 
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{git Commands}
-\description{runs git commands from R}
+\description{Runs git commands from within R.}
 \usage{
     git(commands, ...)
 

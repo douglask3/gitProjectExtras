@@ -2,7 +2,7 @@
 \alias{sourceAllLibs}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Source All Libraries}
-\description{Sources all R code in a given directory}
+\description{Sources all R code in a given directory.}
 \usage{
 sourceAllLibs(path = "libs/", trace = TRUE, ...)
 }
@@ -12,7 +12,7 @@ sourceAllLibs(path = "libs/", trace = TRUE, ...)
   \item{trace}{logical. Default of TRUE lists files as they are sourced. Useful for bug hunting.}
   \item{\dots}{Arguements passed to \code{\link{source}}}
 }
-\details{If there is a sourcing error when trying to source of a file, then the error message is displayed and the 
+\details{If there is a sourcing error when trying to source of a file, then the error message is displayed and the
          file is skipped over. If trace=TRUE, the filename will be listed above the error}
 %%\value{
 %%  ~Describe the value returned

@@ -4,7 +4,7 @@
 \title{Write raster data to a file with git information}
 \description{An extension of \code{\link{writeRaster}} in package
              \code{\link{raster}} which adds projects git information to
-             outputted netcdf raster file}
+             outputted netcdf raster file.}
 \usage{
     writeRaster.gitInfo(x, filename,
     	                VersionNumber = TRUE, URL = TRUE, comment = NULL, ...)

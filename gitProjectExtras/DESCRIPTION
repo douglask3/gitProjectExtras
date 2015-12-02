@@ -7,7 +7,7 @@ Author: Douglas Kelley; Rhys Whitley
 Maintainer: Douglas Kelley <douglas.kelley@mq.edu.au>
 Imports: raster, ncdf4
 Description: {Allows linking code and outputs with information about git
-              revision numbers and storage locations.
-              Also contains tools for setting up a proper project structure and
-              common git commands that can be called within R}
+              revision numbers and storage locations. Also contains tools for
+              setting up a proper project structure and common git commands that
+              can be called within R.}
 License: GPL-2

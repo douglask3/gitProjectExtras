@@ -2,7 +2,7 @@
 \alias{setupProjectStructure}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Setup Project Structure}
-\description{Adds directories required for a project and places the path in global variables}
+\description{Adds directories required for a project and places the path in global variables.}
 \usage{
 setupProjectStructure(namess = paste(dirn, "_dir", sep = ""), dirn = c("outputs", "data", "libs", "temp", "figs", "docs"))
 }

@@ -2,7 +2,7 @@
 \alias{gitVersionNumber}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Return Git Version Number}
-\description{Returns the current git revision code}
+\description{Returns the current git revision code.}
 \usage{
     gitVersionNumber(short = TRUE, gitLoc = ".git")
 }

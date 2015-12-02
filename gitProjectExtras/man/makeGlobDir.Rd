@@ -2,7 +2,7 @@
 \alias{makeGlobDir}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Make Global Directory}
-\description{If it does not already exist, makes directory. Whether directory exists or not, assigns directory path to a global variable}
+\description{If it does not already exist, makes directory. Whether directory exists or not, assigns directory path to a global variable.}
 \usage{
 makeGlobDir(obj, fname, ...)
 }

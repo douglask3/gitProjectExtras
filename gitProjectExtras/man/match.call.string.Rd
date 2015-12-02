@@ -2,7 +2,7 @@
 \alias{match.call.string}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Match Call String}
-\description{Returns the name of the current function}
+\description{Returns the name of the current function.}
 \usage{
 match.call.string(n = 1, call = sys.call(sys.parent(n = n)), ...)
 }

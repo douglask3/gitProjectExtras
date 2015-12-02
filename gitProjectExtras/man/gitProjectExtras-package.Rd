@@ -5,7 +5,7 @@
 \title{Extra Functions for Integrating with git tracked projects}
 \description{Allows linking code and outputs with information about git revision numbers and remote
              location. Also contains tools for setting up a project structure when freshly cloned. Feel free to clone and contribute to the package:
-             \url{https://bitbucket.org/teambcd/gitprojectextras}}
+             \url{https://bitbucket.org/teambcd/gitprojectextras}.}
 \details{
 \tabular{ll}{
 Package: \tab gitProjectExtras\cr

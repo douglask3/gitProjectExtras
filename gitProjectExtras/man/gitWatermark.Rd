@@ -3,7 +3,7 @@
 \alias{dev.off.gitWatermark}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{git Plot Watermark}
-\description{Adds git information to plotting window as watermark}
+\description{Adds git information to a plotting window as a watermark.}
 \usage{
 gitWatermark(VersionNumber = TRUE, URL = TRUE,
              timeAndDate = TRUE, comment = '',
