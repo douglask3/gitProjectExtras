@@ -75,7 +75,7 @@
     ## setup project
     makeDir('yayandwow')
     setwd('yayandwow')
-    git('init')
+    git.init()
     git.status()
 
     ## simple outpur file function
