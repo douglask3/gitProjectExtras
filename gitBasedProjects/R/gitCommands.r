@@ -1,7 +1,10 @@
-git          <- function(commands, ..., log = FALSE) {
+git          <- function(commands, ..., intern = FALSE, postIntern = FALSE) {
     commands = paste(c('git', commands), collapse = ' ')
-    out = system(commands, ...)
-    if (log) out = system(commands, intern = TRUE, ...)
+    
+    if (postIntern) {
+        out = system(commands, ...)
+        out = system(commands, intern = TRUE, ...)
+    } else out = system(commands, intern = intern, ...)
     invisible(out)
 }
 
@@ -46,7 +49,7 @@ git.addCommit<- function(files = '.', message, messageType = '-m',
 }
 
 git.log      <- function(...) {
-    out   = git(c('log', ...), log = TRUE)
+    out   = git(c('log', ...), postIntern = TRUE)
     index = which(sapply(out, substr, 1,6) == "commit")
     index = c(index, length(out) + 1)
     commits = list()
