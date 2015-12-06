@@ -31,44 +31,78 @@ Rhys Whitley   \email{rhys.whitley@gmail.com}}
 %%~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
 %%}
 \examples{
-	## From command line
+    ############################
+    ## To setup a new project ##
+    ############################
+    
+	## Either from command line:
 	\dontrun{
-		>> git clone https://bitbucket.org/teambcd/gitprojectextras.git
-		>> cd gitprojectextras
+		>> mkdir gitBasedProjectsExample
+		>> cd gitBasedProjectsExample
+        >> git init
+        >> git remote add origin https//yayandwow.com
 		>> R
 	}
-	## From R
-	library("gitBasedProjects")
-	makeDir("tryOut")
-	setwd("tryOut")
-	setupProjectStructure()
+    
+    ## or from R
+    makeDir("gitBasedProjectsExample")
+    setwd("gitBasedProjectsExample")
+    git.init()
+    git.remote('add origin https//yayandwow.com')
+    
+	## Then, from R
+	setupProjectStructure() # Sets up standard project with directories: 
+                            # docs, figs, libs, outputs and temp
+                            
+    #######################################################
+    ## add and source a lib for plotting an example plot ##
+    #######################################################
 
 	fileConn <- file("libs/yay.r")
 	writeLines(c(
-		"yay <- function(toFile=FALSE) {			",
-		"	funName = match.call.string()			",
-		"	gitRev  = gitVersionNumber()		",
-		"	getURL  = gitRemoteURL()			",
-		"												",
-		"	if (toFile)								",
-		"	pdf(paste('figs/egFig_',funName,			",
-		"			   '.pdf', sep=''))				",
-		"	plot(0)									",
-		"	mtext(paste('git URL:', getURL))		",
-		"	mtext(paste('git rev:', gitRev),		",
-		"		  side=1,line=-1)						",
-		"												",
-		"	if (toFile) dev.off()					",
+		"yay <- function(toFile=FALSE) {                           ",
+		"    funName = match.call.string()                         ",
+		"    gitRev  = gitVersionNumber()                          ",
+		"    getURL  = gitRemoteURL()                              ",
+		"                                                          ",
+		"    if (toFile) {                                         ",
+		"	     pdf(paste(figs_dir, 'egFig_', funName, gitRev,    ",
+		"			   '.pdf', sep=''))                            ",
+        "    }                                                     ",
+		"    plot(0)                                               ",
+		"                                                          ",
+		"	if (toFile) dev.off.gitWatermark()                     ",
+        "   else gitWatermark()                                    ",
+		"	   mtext(paste('git URL:', getURL))		               ",
+		"	   mtext(paste('git rev:', gitRev),		               ",
+		"		  side=1,line=-1)                                  ",
+        "                                                          ",
+        "  out = paste('Plot successfully made for                 ",
+        "               remote project', gitURL, 'with rev         ",
+        "               no.',  gitRev, '\n')                       ",
+        "  cat(out)                                                ",
 	   "}												"),
 	 fileConn)
 
 	close(fileConn)
 
-	sourceAllLibs()
+	sourceAllLibs() # sources all files in 'libs' dir
 
-	yay()
-
-	yay(TRUE)
-
-	list.files("figs/")
+    #######################################################
+    ## Demonstrate commit workflow                       ##
+    #######################################################
+	yay()           # Plots to Null Device
+	yay(TRUE)       # Plots to 'figs' dir.
+	list.files("figs/")d
+    gitVersionNumber()
+    
+    git.status()
+    git.add('libs/yay.r')
+    git.commit('adding an example library')
+    
+    yay()
+    yay(TRUE)
+    list.files("figs/")
+    gitVersionNumber()
+    
 }
