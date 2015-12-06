@@ -26,7 +26,7 @@ addGitInfo2RasterFile <- function(filename, VersionNumber, URL, comment) {
 	nc = nc_open(filename, write = TRUE)
 		attPutStandard(VersionNumber, "git Revision Number", gitVersionNumber())
 		attPutStandard(URL          , "git Repository URL" , gitRemoteURL())
-		attPutStandard(TRUE         , "git info by"        , paste("gitProjectExtras",  packageVersion('gitProjectExtras')))
+		attPutStandard(TRUE         , "git info by"        , paste("gitBasedProjects",  packageVersion('gitBasedProjects')))
 
 		if (!is.null(comment)) {
 			if (is.null(names(comment)))

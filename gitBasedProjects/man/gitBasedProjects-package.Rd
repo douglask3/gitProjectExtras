@@ -1,6 +1,6 @@
-\name{gitProjectExtras-package}
-\alias{gitProjectExtras-package}
-\alias{gitProjectExtras}
+\name{gitBasedProjects-package}
+\alias{gitBasedProjects-package}
+\alias{gitBasedProjects}
 \docType{package}
 \title{Extra Functions for Integrating with git tracked projects}
 \description{Allows linking code and outputs with information about git revision numbers and remote
@@ -8,10 +8,10 @@
              \url{https://bitbucket.org/teambcd/gitprojectextras}.}
 \details{
 \tabular{ll}{
-Package: \tab gitProjectExtras\cr
+Package: \tab gitBasedProjects\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2014-10-15\cr
+Version: \tab 3.0\cr
+Date: \tab 2015-12-06\cr
 License: \tab GPL 2\cr
 Website: https://bitbucket.org/teambcd/gitprojectextras
 }
@@ -38,7 +38,7 @@ Rhys Whitley   \email{rhys.whitley@gmail.com}}
 		>> R
 	}
 	## From R
-	library("gitProjectExtras")
+	library("gitBasedProjects")
 	makeDir("tryOut")
 	setwd("tryOut")
 	setupProjectStructure()
