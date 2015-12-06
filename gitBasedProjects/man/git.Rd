@@ -1,10 +1,14 @@
 \name{git}
 \alias{git}
+\alias{git.init}
+\alias{git.remote}
 \alias{git.push}
 \alias{git.pull}
 \alias{git.status}
 \alias{git.diff}
 \alias{git.add}
+\alias{git.mv}
+\alias{git.rm}
 \alias{git.commit}
 \alias{git.addCommit}
 \alias{git.checkout}
@@ -18,6 +22,9 @@
 \description{Runs git commands from within R.}
 \usage{
     git(commands, ...)
+    
+    git.init(...)
+    git.remote(...)
 
     git.push(...)
     git.pull(...)
@@ -26,6 +33,8 @@
 
     git.diff(files = '.', ...)
     git.add(files = '.', ...)
+    git.mv(files = '.', ...)
+    git.rm(files = '.', ...)
     git.commit(message, messageType = '-m', ...)
 
     git.addCommit(files = '.', message, messageType = '-m',
@@ -39,7 +48,7 @@
   \item{commands}{string (or string vector) describing commands being sent to git}
   \item{...}{additional commands passed to \code{git} and ultimatly to
              \code{\link{system}}}
-  \item{files}{vector or files to be added}
+  \item{files}{vector or files to be added (\code{git.add}), moved (\code{git.mv}) or removed (\code{git.rm})}
   \item{message}{commit message}
   \item{messageType}{commit message type, default '-m' for command line message
                      or '-F' for file. See git documentation for more options.}

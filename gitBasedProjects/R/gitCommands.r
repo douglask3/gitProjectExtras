@@ -5,11 +5,13 @@ git          <- function(commands, ..., log = FALSE) {
     invisible(out)
 }
 
+git.init     <- function(...) git(c('init', ...))
 git.push     <- function(...) git(c('push', ...))
 git.pull     <- function(...) git(c('pull', ...))
 
 
 git.status   <- function(...) git(c('status', ...))
+git.remote   <- function(...) git(c('remote', ...))
 
 
 git.commit   <- function(message, messageType = '-m', ...) {
@@ -21,6 +23,12 @@ git.commit   <- function(message, messageType = '-m', ...) {
 
 git.add      <- function(files ='.', ...)
     gitOptionCommandFile('add', files, ...)
+
+git.rm       <- function(files ='.', ...)
+    gitOptionCommandFile('rm', files, ...)
+
+git.mv       <- function(files ='.', ...)
+    gitOptionCommandFile('mv', files, ...)
 
 git.diff      <- function(files ='.', ...)
     gitOptionCommandFile('diff', files, ...)
