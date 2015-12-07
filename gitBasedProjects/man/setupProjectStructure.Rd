@@ -4,15 +4,15 @@
 \title{Setup Project Structure}
 \description{Adds directories required for a project and places the path in global variables.}
 \usage{
-setupProjectStructure(namess = paste(dirn, "_dir", sep = ""), dirn = c("outputs", "data", "libs", "temp", "figs", "docs"))
+setupProjectStructure(names = paste(dirn, "_dir", sep = ""), dirn = c("outputs", "data", "libs", "temp", "figs", "docs"))
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{namess}{Names of the global variables directory path will be stores. If not defined, variables are named as '<directory name>_dir'}
+  \item{names}{Names of the global variables directory path will be stores. If not defined, variables are named as '<directory name>_dir'}
   \item{dirn}{directories to be created, with paths relative to current working directory. By default, creates folders for 'outputs', 'data', 'temp', 'figs', 'docs'}
 }
 %%\details{}
-\value{Sets "namess" as globally callable variables}
+\value{Sets "names" as globally callable variables}
 %%\references{
 %% ~put references to the literature/web site here ~}
 \author{Douglas Kelley \email{douglas.i.kelley@gmail.com}}
@@ -38,7 +38,7 @@ setupProjectStructure(namess = paste(dirn, "_dir", sep = ""), dirn = c("outputs"
 
 	#########################################################################
 
-	setupProjectStructure(namess = c("yayDir", "wowDir"), dirn = c("yay", "wow"))
+	setupProjectStructure(names = c("yayDir", "wowDir"), dirn = c("yay", "wow"))
 
 	list.files()
 	printFiles( c("yay", "wow"))

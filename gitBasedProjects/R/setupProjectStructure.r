@@ -1,4 +1,4 @@
-setupProjectStructure <- function(namess = paste(dirn,'_dir',sep=""),
+setupProjectStructure <- function(names = paste(dirn,'_dir',sep=""),
 					                dirn = c('outputs', 'data', "libs",
 									         'temp', 'figs', 'docs'))
-	mapply(makeGlobDir, namess, paste(dirn, '/', sep = ''))
+	mapply(makeGlobDir, names, paste(dirn, '/', sep = ''))
