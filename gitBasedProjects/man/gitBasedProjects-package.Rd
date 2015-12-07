@@ -34,7 +34,7 @@ Rhys Whitley   \email{rhys.whitley@gmail.com}}
     ############################
     ## To setup a new project ##
     ############################
-    
+
 	## Either from command line:
 	\dontrun{
 		>> mkdir gitBasedProjectsExample
@@ -43,17 +43,17 @@ Rhys Whitley   \email{rhys.whitley@gmail.com}}
         >> git remote add origin https//yayandwow.com
 		>> R
 	}
-    
+
     ## or from R
     makeDir("gitBasedProjectsExample")
     setwd("gitBasedProjectsExample")
     git.init()
     git.remote('add origin https//yayandwow.com')
-    
+
 	## Then, from R
-	setupProjectStructure() # Sets up standard project with directories: 
+	setupProjectStructure() # Sets up standard project with directories:
                             # docs, figs, libs, outputs and temp
-                            
+
     #######################################################
     ## add and source a lib for plotting an example plot ##
     #######################################################
@@ -63,23 +63,20 @@ Rhys Whitley   \email{rhys.whitley@gmail.com}}
 		"yay <- function(toFile=FALSE) {                           ",
 		"    funName = match.call.string()                         ",
 		"    gitRev  = gitVersionNumber()                          ",
-		"    getURL  = gitRemoteURL()                              ",
+		"    gitURL  = gitRemoteURL()                              ",
 		"                                                          ",
 		"    if (toFile) {                                         ",
 		"	     pdf(paste(figs_dir, 'egFig_', funName, gitRev,    ",
-		"			   '.pdf', sep=''))                            ",
-        "    }                                                     ",
+		"			   '.pdf', sep='-'))                           ",
+        "    } else dev.new()                                      ",
 		"    plot(0)                                               ",
 		"                                                          ",
 		"	if (toFile) dev.off.gitWatermark()                     ",
         "   else gitWatermark()                                    ",
-		"	   mtext(paste('git URL:', getURL))		               ",
-		"	   mtext(paste('git rev:', gitRev),		               ",
-		"		  side=1,line=-1)                                  ",
         "                                                          ",
-        "  out = paste('Plot successfully made for                 ",
-        "               remote project', gitURL, 'with rev         ",
-        "               no.',  gitRev, '\n')                       ",
+        "  out = paste('Plot successfully made for',               ",
+        "               'remote project', gitURL, 'with rev',      ",
+        "               'no.',  gitRev, '\n')                      ",
         "  cat(out)                                                ",
 	   "}												"),
 	 fileConn)
@@ -93,16 +90,16 @@ Rhys Whitley   \email{rhys.whitley@gmail.com}}
     #######################################################
 	yay()           # Plots to Null Device
 	yay(TRUE)       # Plots to 'figs' dir.
-	list.files("figs/")d
+	list.files("figs/")
     gitVersionNumber()
-    
+
     git.status()
     git.add('libs/yay.r')
     git.commit('adding an example library')
-    
+
     yay()
     yay(TRUE)
     list.files("figs/")
     gitVersionNumber()
-    
+
 }
