@@ -28,7 +28,7 @@ makeGlobDir(obj, fname, ...)
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-	\code{\link{makeDir}}
+	\code{\link{makeDir}},
 	\code{\link{dir.create}}
 }
 \examples{

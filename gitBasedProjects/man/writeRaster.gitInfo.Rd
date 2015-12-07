@@ -33,9 +33,9 @@
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-    \code{\link{raster}}
-    \code{\link{writeRaster}}
-    \code{\link{gitWatermark}}
+    \code{\link{raster}},
+    \code{\link{writeRaster}},
+    \code{\link{gitWatermark}},
     \code{\link{dev.off.gitWatermark}}
 }
 \examples{

@@ -25,7 +25,7 @@ makeDir(fname, ...)
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-    \code{\link{makeGlobDir}}
+    \code{\link{makeGlobDir}},
     \code{\link{dir.create}}
 }
 \examples{

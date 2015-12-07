@@ -22,7 +22,7 @@
 \description{Runs common linux-based git commands from within R.}
 \usage{
     git(commands, ..., intern = FALSE, postIntern = FALSE)
-    
+
     git.init(...)
     git.remote(...)
 
@@ -54,11 +54,11 @@
                      or `-F' for file. See git documentation for more options.}
   \item{addOptions}{git commands used by git.add}
   \item{commitOptions}{git commands used by git.commit}
-  \item{intern}{a logical (not \code{NA}) which indicates whether to capture the output of the command as 
+  \item{intern}{a logical (not \code{NA}) which indicates whether to capture the output of the command as
                            an \code{R} character vector.
-  \item{postIntern}{a logical (not \code{NA}). For git commands that do not change the status of the repo 
-                   (as does \code{git.commit}), 
-                    allows printing to console (i.e, \code{intern = FALSE}) followed by interning to 
+  \item{postIntern}{a logical (not \code{NA}). For git commands that do not change the status of the repo
+                   (as does \code{git.commit}),
+                    allows printing to console (i.e, \code{intern = FALSE}) followed by interning to
                     variable (i.e, \code{intern = TRUE})}
 }
 \details{
@@ -67,7 +67,7 @@
     to intern the printout (i.e, capture the output of the command as an R
     character vector rather than print to console). git.addCommit is an additional command which performs
     the command line equivalent of \code{git add <<files>>; git commit -m <<message>>} in one line.
-    \code{git.log()} output is to console and interned to a variable of class \code{gitRevisions}. 
+    \code{git.log()} output is to console and interned to a variable of class \code{gitRevisions}.
     \code{\link{print}} (i.e., \code{print.gitRevisions}) can be used to print a revision history.
     The function \code{\link{summary}} (i.e., \code{summary.gitRevisions}) can be used to obtain a list of revision numbers.
     See example below
@@ -77,7 +77,7 @@
 \note{These functions invoke commands and may not work on all OSs}
 
 \seealso{
-    \code{\link{gitRemoteURL}}
+    \code{\link{gitRemoteURL}},
     \code{\link{gitVersionNumber}}
 }
 \examples{
