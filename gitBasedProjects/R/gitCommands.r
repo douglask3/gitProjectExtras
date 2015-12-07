@@ -1,6 +1,6 @@
 git          <- function(commands, ..., intern = FALSE, postIntern = FALSE) {
     commands = paste(c('git', commands), collapse = ' ')
-    
+
     if (postIntern) {
         out = system(commands, ...)
         out = system(commands, intern = TRUE, ...)
@@ -84,3 +84,5 @@ printCatN <- function(x, ...)
     invisible(sapply(x, function(i) cat(paste(i,'\n'), ...)))
 
 git.checkout <- function(...) git(c('checkout', ...))
+
+git.branch   <- function(...) git(c('branch'  , ...))
