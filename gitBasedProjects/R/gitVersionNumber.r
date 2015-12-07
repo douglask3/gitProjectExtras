@@ -1,4 +1,4 @@
-gitVersionNumber <- function(short = TRUE, gitLoc = ".git") {
+gitVersionNumber <- function(short = TRUE, gitLoc = ".") {
 	gitLoc   = findProjectPath(gitLoc)
 	headPath = file.path(gitLoc, "HEAD")
 	headAt   = as.matrix(read.table(headPath, sep = " ",
