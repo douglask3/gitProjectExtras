@@ -22,14 +22,23 @@ gitWatermark <- function(VersionNumber = TRUE, URL = TRUE,
     x = usr[1] + diff(usr[1:2]) * x
     y = usr[3] + diff(usr[3:4]) * y
 
-    col = make.transparent(col, transparency)
+    if (names(dev.cur()) == 'X11') col = make.lighter(col, transparency)
+    else col = make.transparent(col, transparency)
 
-    text(x, y, txt, srt = srt, col = col, xpd = TRUE,...)
-
+    try(text(x, y, txt, srt = srt, col = col, xpd = TRUE,...), silent = TRUE)
+    test = tail(names(warnings()), 1)
 }
 
-make.transparent <- function(col, transparency) {
+make.transparent <- function(col, transparency = 0.5) {
      ## Semitransparent colours
      tmp <- col2rgb(col)/255
      rgb(tmp[1,], tmp[2,], tmp[3,], alpha=1-transparency)
+}
+
+make.lighter <- function(color, factor = 0.5) {
+    col    = col2rgb(color)
+    factor = (255 - col) * factor
+    col    = col + factor
+    col    = rgb(t(col), maxColorValue=255)
+    return(col)
 }
