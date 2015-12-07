@@ -1,4 +1,7 @@
-git          <- function(commands, ..., intern = FALSE, postIntern = FALSE) {
+git          <- function(commands, ..., help = FALSE, intern = FALSE,
+                         postIntern = FALSE) {
+
+    if (help) commands = c('help', head(commands, 1))
     commands = paste(c('git', commands), collapse = ' ')
 
     if (postIntern) {
@@ -24,21 +27,22 @@ git.commit   <- function(message, messageType = '-m', ...) {
     git(commands)
 }
 
-git.add      <- function(files ='.', ...)
-    gitOptionCommandFile('add', files, ...)
+git.add      <- function(files = '.', options = '', ...)
+    gitOptionCommandFile('add', files, options, ...)
 
-git.rm       <- function(files ='.', ...)
-    gitOptionCommandFile('rm', files, ...)
+git.rm       <- function(files = '.', options = '', ...)
+    gitOptionCommandFile('rm', files, options, ...)
 
-git.mv       <- function(files ='.', ...)
-    gitOptionCommandFile('mv', files, ...)
+git.mv       <- function(files = '.', options = '', ...)
+    gitOptionCommandFile('mv', files, options, ...)
 
-git.diff      <- function(files ='.', ...)
-    gitOptionCommandFile('diff', files, ...)
+git.diff     <- function(files = '.', options = '', ...)
+    gitOptionCommandFile('diff', files, options, ...)
 
-gitOptionCommandFile <- function(command, files, ...) {
-    commands  = c(command, ..., files)
-    git(commands)
+gitOptionCommandFile <- function(command, files = '', options,...) {
+
+    commands  = c(command, options, files)
+    git(commands, ...)
 }
 
 git.addCommit<- function(files = '.', message, messageType = '-m',

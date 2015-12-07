@@ -22,7 +22,7 @@
 \title{git Commands}
 \description{Runs common linux-based git commands from within R.}
 \usage{
-    git(commands, ..., intern = FALSE, postIntern = FALSE)
+    git(commands, ..., help = FALSE, intern = FALSE, postIntern = FALSE)
 
     git.init(...)
     git.remote(...)
@@ -32,10 +32,10 @@
 
     git.status(...)
 
-    git.diff(files = '.', ...)
-    git.add(files = '.', ...)
-    git.mv(files = '.', ...)
-    git.rm(files = '.', ...)
+    git.diff(files = '.', options = '', ...)
+    git.add(files = '.', options = '', ...)
+    git.mv(files = '.', options = '', ...)
+    git.rm(files = '.', options = '', ...)
     git.commit(message, messageType = '-m', ...)
 
     git.addCommit(files = '.', message, messageType = '-m',
@@ -52,11 +52,13 @@
   \item{...}{additional commands passed to \code{git} and ultimately to
              \code{\link{system}}}
   \item{files}{vector of files to be added (\code{git.add}), moved (\code{git.mv}) or removed (\code{git.rm})}
+  \item{options}{options to be passed to git command}
   \item{message}{commit message}
   \item{messageType}{commit message type, default `-m' for command line message
                      or `-F' for file. See git documentation for more options.}
   \item{addOptions}{git commands used by git.add}
   \item{commitOptions}{git commands used by git.commit}
+  \item{help}{a logical (not \code{NA}) which indicates whether show the full help description of a command}
   \item{intern}{a logical (not \code{NA}) which indicates whether to capture the output of the command as
                            an \code{R} character vector.
   \item{postIntern}{a logical (not \code{NA}). For git commands that do not change the status of the repo
