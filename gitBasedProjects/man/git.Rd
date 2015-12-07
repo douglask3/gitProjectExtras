@@ -13,6 +13,7 @@
 \alias{git.addCommit}
 \alias{git.checkout}
 \alias{git.log}
+\alias{git.branch}
 \alias{print.gitRevision}
 \alias{print.gitRevisions}
 \alias{summary.gitRevisions}
@@ -42,6 +43,8 @@
 
     git.checkout(...)
     git.log(...)
+
+    git.branch(...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
