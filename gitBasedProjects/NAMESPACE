@@ -7,4 +7,4 @@ export(makeDir, makeGlobDir, setupProjectStructure,
        git.log, print.gitRevision, print.gitRevisions, summary.gitRevisions,
        gitWatermark, dev.off.gitWatermark, writeRaster.gitInfo)
 
-import(ncdf4, raster)
+import(raster)
