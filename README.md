@@ -56,7 +56,7 @@ see `?git` for more commands and options.
 
 
 ## More Info
-[click here](http://douglask3.github.io/docs/gitProjectExtras-manual.pdff) for documentation.
+[click here](http://douglask3.github.io/docs/gitProjectExtras-manual.pdf) for documentation.
 
 
 # Contact details
