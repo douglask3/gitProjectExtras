@@ -30,6 +30,9 @@ git.commit   <- function(message, messageType = '-m', ...) {
 git.add      <- function(files = '.', options = '', ...)
     gitOptionCommandFile('add', files, options, ...)
 
+git.reset      <- function(files = '.', options = '', ...)
+    gitOptionCommandFile('reset', files, options, ...)
+
 git.rm       <- function(files = '.', options = '', ...)
     gitOptionCommandFile('rm', files, options, ...)
 
@@ -39,7 +42,7 @@ git.mv       <- function(files = '.', options = '', ...)
 git.diff     <- function(files = '.', options = '', ...)
     gitOptionCommandFile('diff', files, options, ...)
 
-gitOptionCommandFile <- function(command, files = '', options,...) {
+gitOptionCommandFile <- function(command, files = '', options, ...) {
 
     commands  = c(command, options, files)
     git(commands, ...)

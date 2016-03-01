@@ -7,6 +7,7 @@
 \alias{git.status}
 \alias{git.diff}
 \alias{git.add}
+\alias{git.reset}
 \alias{git.mv}
 \alias{git.rm}
 \alias{git.commit}
@@ -34,6 +35,7 @@
 
     git.diff(files = '.', options = '', ...)
     git.add(files = '.', options = '', ...)
+    git.reset(files = '.', options = '', ...)
     git.mv(files = '.', options = '', ...)
     git.rm(files = '.', options = '', ...)
     git.commit(message, messageType = '-m', ...)
@@ -51,7 +53,7 @@
   \item{commands}{string (or string vector) describing commands being sent to git}
   \item{...}{additional commands passed to \code{git} and ultimately to
              \code{\link{system}}}
-  \item{files}{vector of files to be added (\code{git.add}), moved (\code{git.mv}) or removed (\code{git.rm})}
+  \item{files}{vector of files to be added (\code{git.add}), reset (\code{git.reset}), moved (\code{git.mv}) or removed (\code{git.rm})}
   \item{options}{options to be passed to git command}
   \item{message}{commit message}
   \item{messageType}{commit message type, default `-m' for command line message
@@ -101,7 +103,11 @@
 
     ## commit these files
     git.add() ## adds all files
-    git.commit('yay and wow')
+    git.reset('wow.txt') ## removed wow.txt of staging area
+    git.commit('yay')
+
+    git.add('wow.txt') ## adds wow.txt back
+    git.commit('and wow')
 
     ## add new file and change old one
     write.text('yayandwow', 'newFile.txt', sep ='')
