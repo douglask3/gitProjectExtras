@@ -3,18 +3,25 @@ dev.off.gitWatermark <- function(...) {
     dev.off()
 }
 
-
-gitWatermark <- function(VersionNumber = TRUE, URL = TRUE,
-                         timeAndDate = TRUE, comment = '',
-                         x = 0.5, y = 0.5,
-                         col = 'black',transparency = 0.8, srt = 45, ...) {
-
+gitFullInfo <- function(VersionNumber = TRUE, URL = TRUE,
+                         timeAndDate = TRUE, comment = '') {
     txt = c('git Information:')
     if (VersionNumber) txt = c(txt, gitVersionNumber())
     if (URL          ) txt = c(txt, gitRemoteURL())
     if (timeAndDate  ) txt = c(txt, as.character(Sys.time()))
     txt = c(txt, comment)
     txt = paste(txt, collapse = '\n')
+
+    return(txt)
+}
+
+
+gitWatermark <- function(VersionNumber = TRUE, URL = TRUE,
+                         timeAndDate = TRUE, comment = '',
+                         x = 0.5, y = 0.5,
+                         col = 'black',transparency = 0.8, srt = 45, ...) {
+
+    gitFullInfo(VersionNumber, URL, timeAndDate, comment)
 
     par(fig = c(0, 1, 0, 1), mar = rep(0, 4))
     usr = par('usr')
