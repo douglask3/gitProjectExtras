@@ -5,6 +5,7 @@ export(makeDir, makeGlobDir, setupProject, setupProjectStructure,
        git.diff, git.add, git.mv, git.rm,
        git.commit, git.addCommit, git.checkout,
        git.log, print.gitRevision, print.gitRevisions, summary.gitRevisions,
+       gitFullInfo,
        gitWatermark, dev.off.gitWatermark, writeRaster.gitInfo)
 
 import(raster)
