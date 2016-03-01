@@ -30,7 +30,7 @@ gitFullInfo(VersionNumber = TRUE, URL = TRUE,
     \code{\link{Sys.time}}
 }
 \examples{
-    
+
     setupProject('yay')
 
     # Perform a commit
@@ -39,7 +39,7 @@ gitFullInfo(VersionNumber = TRUE, URL = TRUE,
     git.addCommit('.', 'a commit')
 
     txt = gitFullInfo()
-    cat(txt, file, append = TRUE)
+    cat(txt, 'wow.txt', append = TRUE)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
