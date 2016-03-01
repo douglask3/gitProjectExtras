@@ -1,4 +1,4 @@
-export(makeDir, makeGlobDir, setupProjectStructure,
+export(makeDir, makeGlobDir, setupProject, setupProjectStructure,
        sourceAllLibs, match.call.string,
        gitRemoteURL, gitVersionNumber,
        git, git.init, git.remote, git.push, git.pull, git.status,
