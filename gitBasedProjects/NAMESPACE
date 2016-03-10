@@ -9,3 +9,4 @@ export(makeDir, makeGlobDir, setupProject, setupProjectStructure,
        gitWatermark, dev.off.gitWatermark, writeRaster.gitInfo)
 
 import(raster)
+import(ncdf4)
