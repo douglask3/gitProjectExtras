@@ -3,13 +3,11 @@ git          <- function(commands, ..., help = FALSE, intern = FALSE,
 
     if (help) commands = c('help', head(commands, 1))
     commands = paste(c('git', commands), collapse = ' ')
-    print(commands)
-
-    systemCommands <- function(intern) lapply(commands, function(i) browser())#system,  intern = intern, ...)
+    
     if (postIntern) {
-        out = systemCommands(FALSE)
-        out = systemCommands(TRUE)
-    } else out = systemCommands(intern)
+        out = system(commands, ...)
+        out = system(commands, intern = TRUE, ...)
+    } else out = system(commands, intern = intern, ...)
     invisible(out)
 }
 
