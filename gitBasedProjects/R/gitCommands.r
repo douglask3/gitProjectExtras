@@ -73,6 +73,14 @@ git.log      <- function(...) {
     invisible(commits)
 }
 
+git.tag <-function(version, message, messageType = '-m', ...) {
+    message  = paste('"', message, '"', sep = "")
+    commands = c('tag -a', version, messageType, ..., message)
+
+    git(commands)
+}
+
+
 print.gitRevision    <- function(x, ...) printCatN(x,...)
 
 print.gitRevisions   <- function(x, ...) {
