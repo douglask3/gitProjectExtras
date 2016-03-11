@@ -3,11 +3,13 @@ git          <- function(commands, ..., help = FALSE, intern = FALSE,
 
     if (help) commands = c('help', head(commands, 1))
     commands = paste(c('git', commands), collapse = ' ')
+    print(commands)
 
+    systemCommands <- function(intern) lapply(commands, function(i) browser())#system,  intern = intern, ...)
     if (postIntern) {
-        out = system(commands, ...)
-        out = system(commands, intern = TRUE, ...)
-    } else out = system(commands, intern = intern, ...)
+        out = systemCommands(FALSE)
+        out = systemCommands(TRUE)
+    } else out = systemCommands(intern)
     invisible(out)
 }
 
@@ -73,7 +75,8 @@ git.log      <- function(...) {
     invisible(commits)
 }
 
-git.tag <-function(version, message, messageType = '-m', ...) {
+git.tag <-function(version = NULL, message = version, messageType = '-m', ...) {
+    if (is.null(version)) return(git('tag'))
     message  = paste('"', message, '"', sep = "")
     commands = c('tag -a', version, messageType, ..., message)
 
