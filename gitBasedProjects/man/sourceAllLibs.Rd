@@ -4,14 +4,16 @@
 \title{Source All Libraries}
 \description{Sources all R code in a given directory.}
 \usage{
-sourceAllLibs(path = "libs/", trace = TRUE, stopIfError = FALSE, ...)
+sourceAllLibs(path = "libs/", trace = TRUE, recursive = TRUE,
+              stopIfError = TRUE, ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{path}{Path to the directory containing code. Default is 'libs'}
   \item{trace}{logical. Default of TRUE lists files as they are sourced. Useful for bug hunting.}
+  \item{recursive}{logical. Should the sourcing recurse into directories. Default if TRUE sources all sub-directories as well}
   \item{stopIfError}{logical. Should stop be called (i.e, script terminated) if there is
-                     and error in a source file. Default of FALSE. If TRUE, file with error is skipped over.}
+                     and error in a source file. Default of TRUE. If FALSE, file with error is skipped over.}
   \item{\dots}{Arguements passed to \code{\link{source}}}
 }
 \details{If there is a sourcing error when trying to source of a file, then the
