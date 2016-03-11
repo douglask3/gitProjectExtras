@@ -12,6 +12,7 @@
 \alias{git.rm}
 \alias{git.commit}
 \alias{git.addCommit}
+\alias{git.tag}
 \alias{git.checkout}
 \alias{git.log}
 \alias{git.branch}
@@ -43,6 +44,8 @@
     git.addCommit(files = '.', message, messageType = '-m',
                   addOptions = '', commitOptions = '')
 
+    git.tag(version = NULL, message = version, messageType = '-m', ...)
+
     git.checkout(...)
     git.log(...)
 
@@ -55,7 +58,8 @@
              \code{\link{system}}}
   \item{files}{vector of files to be added (\code{git.add}), reset (\code{git.reset}), moved (\code{git.mv}) or removed (\code{git.rm})}
   \item{options}{options to be passed to git command}
-  \item{message}{commit message}
+  \item{version}{version number of ID passed to tag. Default of NULL displays all previous tags}
+  \item{message}{commit or tag message}
   \item{messageType}{commit message type, default `-m' for command line message
                      or `-F' for file. See git documentation for more options.}
   \item{addOptions}{git commands used by git.add}

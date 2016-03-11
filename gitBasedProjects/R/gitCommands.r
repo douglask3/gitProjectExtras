@@ -3,7 +3,7 @@ git          <- function(commands, ..., help = FALSE, intern = FALSE,
 
     if (help) commands = c('help', head(commands, 1))
     commands = paste(c('git', commands), collapse = ' ')
-    
+
     if (postIntern) {
         out = system(commands, ...)
         out = system(commands, intern = TRUE, ...)
