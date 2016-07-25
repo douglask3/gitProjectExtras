@@ -21,7 +21,7 @@ gitWatermark <- function(VersionNumber = TRUE, URL = TRUE,
                          x = 0.5, y = 0.5,
                          col = 'black',transparency = 0.8, srt = 45, ...) {
 
-    gitFullInfo(VersionNumber, URL, timeAndDate, comment)
+    txt = gitFullInfo(VersionNumber, URL, timeAndDate, comment)
 
     par(fig = c(0, 1, 0, 1), mar = rep(0, 4))
     usr = par('usr')
