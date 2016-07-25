@@ -1,2 +1,2 @@
-R CMD build gitProjectExtras
-R CMD check gitProjectExtras
+R CMD build gitBasedProjects
+R CMD check gitBasedProjects
