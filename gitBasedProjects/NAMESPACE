@@ -1,10 +1,12 @@
-export(makeDir, makeGlobDir, setupProjectStructure,
+export(makeDir, makeGlobDir, setupProject, setupProjectStructure,
        sourceAllLibs, match.call.string,
        gitRemoteURL, gitVersionNumber,
        git, git.init, git.remote, git.push, git.pull, git.status,
-       git.diff, git.add, git.mv, git.rm,
+       git.diff, git.add, git.reset, git.mv, git.rm,
        git.commit, git.addCommit, git.checkout,
        git.log, print.gitRevision, print.gitRevisions, summary.gitRevisions,
+       gitFullInfo,
        gitWatermark, dev.off.gitWatermark, writeRaster.gitInfo)
 
-import(ncdf4, raster)
+import(raster)
+import(ncdf4)

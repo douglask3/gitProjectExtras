@@ -1,11 +1,12 @@
 Package: gitBasedProjects
 Type: Package
 Title: Extra Functions for Integrating with git based projects
-Version: 3.00
-Date: 2015-11-09
+Version: 3.32
+Date: 2016-03-11
 Author: Douglas Kelley; Rhys Whitley
 Maintainer: Douglas Kelley <douglas.kelley@mq.edu.au>
-Imports: raster, ncdf4
+Imports: raster
+Imports: ncdf4
 Description: {Allows linking code and outputs with information about git
               revision numbers and storage locations. Also contains tools for
               setting up a proper project structure and common git commands that
