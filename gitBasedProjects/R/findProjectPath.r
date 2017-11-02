@@ -16,7 +16,7 @@ findProjectPath <- function(path, ncallMax = 10, warnOnly = TRUE) {
 	}
 	if (nc > ncallMax) {
 		if (warnOnly) {
-			warn(paste('\nno git repo found between', path0, 'and', path, '\n'))
+			warning(paste('\nno git repo found between', path0, 'and', path, '\n'))
 			return('Not_git_repo')
 		} else {
 			stop(paste('\nno git repo found between', path0, 'and', path, '\n'))
