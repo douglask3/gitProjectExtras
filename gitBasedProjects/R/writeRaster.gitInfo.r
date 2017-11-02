@@ -7,13 +7,13 @@ writeRaster.gitInfo <- function(x, filename,
 	filename = filename(x)
 
 	if (filename != "")
-		try(addGitInfo2RasterFile(filename, VersionNumber, URL, comment))
+		addGitInfo2RasterFile(filename, VersionNumber, URL, comment)
 	else {
 		filename = c()
 		for (i in 1:nlayers(x)) filename = c(filename, filename(x[[i]]))
 		filename = unique(filename)
 
-		try(sapply(filename, addGitInfo2RasterFile, VersionNumber, URL, comment))
+		sapply(filename, addGitInfo2RasterFile, VersionNumber, URL, comment)
 	}
 	return(x)
 }

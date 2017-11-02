@@ -1,5 +1,7 @@
 gitVersionNumber <- function(short = TRUE, gitLoc = ".") {
 	gitLoc   = findProjectPath(gitLoc)
+	if (gitLoc == 'Not_git_repo') return('Not_git_repo')
+	
 	headPath = file.path(gitLoc, "HEAD")
 	headAt   = as.matrix(read.table(headPath, sep = " ",
 								    stringsAsFactors = FALSE))
