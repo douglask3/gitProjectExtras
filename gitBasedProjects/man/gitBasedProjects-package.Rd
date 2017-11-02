@@ -10,7 +10,7 @@
 \tabular{ll}{
 Package: \tab gitBasedProjects\cr
 Type: \tab Package\cr
-Version: \tab 3.4\cr
+Version: \tab 3.41\cr
 Date: \tab 2015-12-06\cr
 License: \tab GPL 2\cr
 Website: https://bitbucket.org/teambcd/gitprojectextras

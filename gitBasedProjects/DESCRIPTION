@@ -1,7 +1,7 @@
 Package: gitBasedProjects
 Type: Package
 Title: Extra Functions for Integrating with git based projects
-Version: 3.40
+Version: 3.41
 Date: 2017-11-02
 Author: Douglas Kelley; Rhys Whitley
 Maintainer: Douglas Kelley <douglas.kelley@mq.edu.au>
