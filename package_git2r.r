@@ -1,0 +1,5 @@
+git.add <- function(...) add(repository(), ...)
+git.commit <- function(...) commit(repository(), ...)
+git.status <- function(...) status(...)
+git.diff <- function() cat(diff(repository(), as_char=TRUE))
+git.push <- function(username, password, ...) push(repository(), credentials=cred_user_pass(username, password), ...)
